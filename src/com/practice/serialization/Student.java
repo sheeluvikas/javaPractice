@@ -10,8 +10,15 @@ import java.io.Serializable;
  */
 public class Student implements Serializable {
 
+    /** if we do not explicitly declare the serialVersionUID, the JVM automatically generates one for us.
+     * but this number is Compiler dependent and hence its recommended that we explicitly decalre one.
+      */
     public static final long serialVersionUID = 1l;
 
+    /**
+     * when an object has a reference to another object, these objects must implement the Serializable interface separately,
+     * or else a NotSerializableException will be thrown
+     */
     static String code; /** static members can not be serialized because they are class members. */
     transient String transientData; /** transient members can not be serialized. */
     private EnumSerializable enumSerializable;
