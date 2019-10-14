@@ -1,5 +1,7 @@
 package com.practice.serialization;
 
+import org.omg.PortableServer.THREAD_POLICY_ID;
+
 import java.io.*;
 
 /**
@@ -32,7 +34,7 @@ import java.io.*;
  * exception : {@link java.io.NotSerializableException}
  *
  * If we do not explicitly declare the serialVersionUID, the JVM automatically generates one for us.
- * but this number is Compiler dependent and hence its recommended that we explicitly decalre one.
+ * but this number is Compiler dependent and hence its recommended that we explicitly declare one.
  *
  *  ****** Enums are inherently serializable  !!!.
  *
@@ -41,7 +43,7 @@ import java.io.*;
  */
 public class SerializationDemo {
 
-    public static void main(String args[]) throws IOException, ClassNotFoundException {
+    public static void main(String args[]) throws IOException, ClassNotFoundException, InterruptedException {
 
         String fileName = "./resources/serializedFile";
 
@@ -60,6 +62,8 @@ public class SerializationDemo {
         System.out.println(Student.getCode());
         System.out.println(student1.getTransientData());
         System.out.println(student1.getEnumSerializable());
+        Thread.sleep(100000l);
+
 
     }
 }
