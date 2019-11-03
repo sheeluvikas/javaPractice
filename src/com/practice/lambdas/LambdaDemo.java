@@ -2,6 +2,7 @@ package com.practice.lambdas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -14,7 +15,15 @@ public class LambdaDemo {
 
     public static void main(String args[]){
         Greeter greeter1 = (s) -> System.out.println(s);
+        /**The above can also be written as : (Method Reference)*/
+        Greeter greeter2 = System.out::println;
+
+        Consumer<String> consumer = System.out::println;
+
         greeter1.perform("Katiyar");
+
+        Runnable runnable = () -> System.out.println("It is Runnable");
+        runnable.run();
 
         List<String> list = new ArrayList<>();
         list.add("Vikas");
