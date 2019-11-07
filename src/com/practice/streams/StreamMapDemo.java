@@ -2,6 +2,7 @@ package com.practice.streams;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /***
@@ -17,6 +18,7 @@ public class StreamMapDemo {
         list.add(2);
         list.add(14);
 
+        /** stream().map(Function<T, R> mapper) */
         List<String> monthList = list.stream().map(StreamMapDemo::getMonth).collect(Collectors.toList());
         /** here above, we used method references : square, it works because it takes one argument and returns another
          * this is similare to Function, explained above.
@@ -25,6 +27,12 @@ public class StreamMapDemo {
         monthList.stream().forEach(System.out::println);
     }
 
+    /**
+     * Its similar to apply method of Function, as it takes one argument and returns another
+     *
+     * @param i
+     * @return
+     */
     public static String getMonth(Integer i){
         return getMonthName(i);
     }
