@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * This class is used to ...
+ * This class is used to elaborate the concept of the internal working of Hash Map.
  *
  * @Author Vikas Katiyar email: vikaskatiyar@live.com
  * @Since 06-01-2019
