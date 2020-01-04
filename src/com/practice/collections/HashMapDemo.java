@@ -19,9 +19,5 @@ public class HashMapDemo {
         hashMap.put(new Student(1, "Vikas"), "Vikas");
         hashMap.put(new Student(1, "Vikas"), "Rahul");
 
-
-
     }
-
-
 }
