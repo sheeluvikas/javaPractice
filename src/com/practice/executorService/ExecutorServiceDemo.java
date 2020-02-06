@@ -20,8 +20,11 @@ public class ExecutorServiceDemo {
         int coreCount = Runtime.getRuntime().availableProcessors();
         System.out.println("Core count = "+coreCount);
         ExecutorService executorService1 = Executors.newFixedThreadPool(coreCount);
-        Future<String> future = executorService1.submit(new ThreadRunnable());
+
+        Future<String> future = executorService1.submit(new CallableTask());
         /** Future is nothing but a place holder which will arrive in sometime of the future*/
+
+
         System.out.println("The task in between");
         System.out.println(future.get());// this is the blocking method
         System.out.println("Main Method ends here");

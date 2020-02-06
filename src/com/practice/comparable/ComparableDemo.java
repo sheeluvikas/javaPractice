@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * https://www.journaldev.com/16094/java-collections-sort
+ */
 public class ComparableDemo {
 
     public static void main(String[] args) {

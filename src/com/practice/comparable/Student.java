@@ -27,6 +27,12 @@ public class Student  implements Comparable{
         this.name = name;
     }
 
+    /**
+     * compareTo method defines the natural ordering of objects
+     *
+     * @param o
+     * @return
+     */
     @Override
     public int compareTo(Object o) {
         Student student = (Student) o;

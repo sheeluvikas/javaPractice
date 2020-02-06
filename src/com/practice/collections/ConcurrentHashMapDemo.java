@@ -2,6 +2,9 @@ package com.practice.collections;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
 
 /**
  * This class is used to ...
@@ -12,13 +15,9 @@ import java.util.List;
 public class ConcurrentHashMapDemo {
 
     public static void main(String args[]){
-        List<String> list = new ArrayList<>();
 
-        list.add("Vikas");
-        int i = 0;
-        for(String s : list){
-            list.add("R"+i);
-            i ++;
-        }
+        Map<Integer, String> map = new ConcurrentHashMap<>();
+
+
     }
 }

@@ -8,7 +8,7 @@ import java.util.concurrent.Callable;
  * @Author Vikas Katiyar email: vikaskatiyar@live.com
  * @Since 10-03-2019
  */
-public class ThreadRunnable implements Callable {
+public class CallableTask implements Callable {
 
 
     @Override
