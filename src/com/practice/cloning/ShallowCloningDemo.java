@@ -8,7 +8,7 @@ public class ShallowCloningDemo {
          * Shallow cloning is the default one.
          *
          * */
-        Person person = new Person();
+        com.practice.cloning.Person person = new Person();
         City city = new City("Kanpur", 208022L);
 
 

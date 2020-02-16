@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
 public class LambdaDemo {
 
     public static void main(String args[]){
-        Greeter greeter1 = (s) -> System.out.println(s);
+        com.practice.lambdas.Greeter greeter1 = (s) -> System.out.println(s);
         /**The above can also be written as : (Method Reference)*/
-        Greeter greeter2 = System.out::println;
+        com.practice.lambdas.Greeter greeter2 = System.out::println;
 
         Consumer<String> consumer = System.out::println;
 

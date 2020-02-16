@@ -1,5 +1,6 @@
 package com.practice.exceptions;
 
+
 /**
  * This class implements AutoCloseable.
  *
