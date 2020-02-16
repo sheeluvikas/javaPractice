@@ -3,7 +3,7 @@ package com.practice.executorService;
 import java.util.concurrent.Callable;
 
 /**
- * This class is used to ...
+ * This class is a callable task
  *
  * @Author Vikas Katiyar email: vikaskatiyar@live.com
  * @Since 10-03-2019
