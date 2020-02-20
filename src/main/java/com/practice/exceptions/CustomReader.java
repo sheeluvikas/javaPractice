@@ -1,6 +1,8 @@
 package com.practice.exceptions;
 
 
+import org.apache.log4j.Logger;
+
 /**
  * This class implements AutoCloseable.
  *
@@ -8,8 +10,9 @@ package com.practice.exceptions;
  */
 public class CustomReader implements AutoCloseable {
 
+    private static Logger log = Logger.getLogger(CustomReader.class);
     @Override
     public void close() throws Exception {
-        System.out.println("The close method called for CustomReader !!!");
+        log.info("The close method called for CustomReader !!!");
     }
 }

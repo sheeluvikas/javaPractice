@@ -1,7 +1,10 @@
 package com.practice.exceptions;
 
+import org.apache.log4j.Logger;
+
 public class OuterResource implements AutoCloseable {
 
+    private static Logger log = Logger.getLogger(OuterResource.class);
     CustomReader customReader ;
 
     public OuterResource(CustomReader customReader) {
@@ -10,7 +13,7 @@ public class OuterResource implements AutoCloseable {
 
     @Override
     public void close() throws Exception {
-        System.out.println("The OuterResource is Closed() !!!");
+        log.warn("The OuterResource is Closed() !!!");
 
         /**
          * Exception thrown in the close() method will be supressed.

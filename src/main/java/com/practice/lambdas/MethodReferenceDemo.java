@@ -1,8 +1,5 @@
 package com.practice.lambdas;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.omg.PortableServer.THREAD_POLICY_ID;
-
 /**
  * This class explains the concept of Method References in java 8
  *
