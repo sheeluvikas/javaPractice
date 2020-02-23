@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * This class elaborate the concept of Streams in java 8
@@ -40,5 +41,7 @@ public class StreamsDemo {
                 System.out.println(value);
             }
         });
+
+        IntStream intStream = list.stream().mapToInt(x -> x.intValue());
     }
 }
