@@ -1,7 +1,12 @@
 package com.practice.streams;
 
+import sun.tools.tree.DoubleExpression;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -25,6 +30,27 @@ public class StreamMapDemo {
          * */
 
         monthList.stream().forEach(System.out::println);
+
+
+
+        List<Double> salary = Arrays.asList(10000D, 20000D, 15000D);
+
+        BinaryOperator<Double> binaryOperator = (a, b) -> (a.doubleValue() + b.doubleValue())/2;
+
+        Optional<Double> totalK = salary.stream().map(x -> x/1000).reduce(binaryOperator);
+        System.out.println(totalK.get());
+
+        /******** Find the greatest ****/
+        List<Integer> intList = Arrays.asList(1, 5, 6, 3, 2, 4, 6, 7, 8, 12, 32, 4, 5, 32, 4, 22, 4);
+
+        BinaryOperator<Integer> getGratest = (a, b) -> a > b ? a : b;
+
+        System.out.println("The greates number is : " + intList.stream().reduce(getGratest).get());
+    }
+
+    private static Double getAverage(Double a, Double b){
+        System.out.println("a = " + a + ", b = " + b);
+        return (a.doubleValue() + b.doubleValue())/2;
     }
 
     /**

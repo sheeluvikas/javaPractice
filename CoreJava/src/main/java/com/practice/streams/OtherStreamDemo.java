@@ -31,8 +31,8 @@ public class OtherStreamDemo {
                 .filter(n -> n == 2)
                 .mapToObj(list :: get)
                 .collect(Collectors.toList());
+        
         elementList.forEach(System.out::println);
-
 
     }
 }

@@ -42,6 +42,7 @@ public class StreamsDemo {
             }
         });
 
-        IntStream intStream = list.stream().mapToInt(x -> x.intValue());
+        IntStream intStream = list.stream().mapToInt(x -> x * x);
+        intStream.forEach(System.out::println);
     }
 }
