@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -14,7 +13,8 @@ import java.util.stream.Collectors;
 public class CollectorsDemo {
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(10, 10, 20, 30, 35, 45, 45);
+        List<Integer> list = Utils.getRandomIntegerList(100,6);
+        System.out.println(list);
 
         /** Groups them */
         Map<Integer, List<Integer>> groupingMap = list.stream().collect(Collectors.groupingBy(Integer::intValue));
@@ -29,7 +29,6 @@ public class CollectorsDemo {
                 .collect(Collectors.partitioningBy(greaterThan30Predicate));
         System.out.println("************ Paritioning Map **********");
         System.out.println(partitionMap);
-
 
     }
 }
