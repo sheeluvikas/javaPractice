@@ -9,13 +9,13 @@ import java.util.List;
  */
 public class ParallelStreamsDemo {
 
-    public static void main(String[] args) throws InterruptedException {
-        List<Integer> list = Arrays.asList(10, 20, 30, 40, 50, 60);
+    public static void main(String[] args) {
+        List<Long> list = Arrays.asList(2000L, 2000L, 2000L, 2000L, 2000L, 2000L);
 
         TestClass testClass = new TestClass();
 
         long startTime = System.currentTimeMillis();
-        list.parallelStream().forEach(x -> testClass.sleep(2000L));
+        list.parallelStream().forEach(TestClass::sleep);
         System.out.println(System.currentTimeMillis() - startTime);
     }
 }
