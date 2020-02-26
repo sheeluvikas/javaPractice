@@ -17,11 +17,8 @@ import java.util.stream.Collectors;
 public class StreamMapDemo {
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<>();
-
-        list.add(1);
-        list.add(2);
-        list.add(14);
+        List<Integer> list = Utils.getRandomIntegerList(20, 3);
+        System.out.println("The list is : " + list);
 
         /** stream().map(Function<T, R> mapper) */
         List<String> monthList = list.stream().map(StreamMapDemo::getMonth).collect(Collectors.toList());

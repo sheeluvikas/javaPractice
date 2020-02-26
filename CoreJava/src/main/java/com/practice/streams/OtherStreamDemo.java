@@ -15,12 +15,13 @@ public class OtherStreamDemo {
 
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<>();
+        List<String> list1 = Utils.getStringList(5);
+        System.out.println("The string list is : " + list1);
 
-        list.add(3);
-        list.add(5);
-        list.add(6);
-        list.add(8);
+
+
+        List<Integer> list = Utils.getRandomIntegerList(100, 8);
+        System.out.println(list);
 
         OptionalDouble optionalDouble = IntStream.rangeClosed(0, 5).average();
         System.out.println(optionalDouble.getAsDouble());
@@ -31,7 +32,7 @@ public class OtherStreamDemo {
                 .filter(n -> n == 2)
                 .mapToObj(list :: get)
                 .collect(Collectors.toList());
-        
+
         elementList.forEach(System.out::println);
 
     }
