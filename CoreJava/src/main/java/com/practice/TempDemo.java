@@ -5,13 +5,21 @@ import java.lang.reflect.InvocationTargetException;
 
 public class TempDemo {
 
-    public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        TempDemo tempDemo = TempDemo.class.getConstructor().newInstance();
-        tempDemo.method();
-        TempDemo tempDemo1 = TempDemo.class.newInstance();
-    }
+    public static void main(String[] args) {
+        int arr[] = new int[]{4, 0, 9, 2, 4};
 
-    public static void method(){
-        System.out.println("This is the method() of the TempDemo class");
+        int pos1 = 0;
+        for(int i = 0; i < arr.length; i ++){
+            if(arr[i] != 0){
+                arr[pos1] = arr[i];
+                if(pos1 != i) {
+                    arr[i] = 0;
+                }
+                pos1 = pos1 + 1;
+            }
+        }
+        for(int i = 0; i < arr.length; i++){
+            System.out.println(arr[i]);
+        }
     }
 }

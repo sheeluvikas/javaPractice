@@ -15,14 +15,15 @@ import java.io.*;
  * All the classes of serialized class are automatically serializable.
  *
  * When an object has a reference to another object, these objects must implement the Serializable interface separately,
- * or else a NotSerializableException will be thrown
+ * or else a {@link java.io.NotSerializableException} will be thrown
  *
  * If one of the fields in a serializable object consists of an array of objects,
- * then all these objects must be serializable as well, or else a NotSerializableException will be thrown.
+ * then all these objects must be serializable as well, or else a {@link java.io.NotSerializableException}
+ * will be thrown.
  *
  * transient and static members are not serialized.
- * If there is any change is the class while deserialization, it will give give -
- * --{@link java.io.InvalidClassException} provided, the serialVesionUID is different.
+ * If there is any change in the class while deserialization, it will give give -
+ * --{@link java.io.InvalidClassException} provided, the serialVersionUID is different.
  *
  * Static fields are not serialized because they are class variables and while serialization, we
  * serialize Objects.
@@ -30,7 +31,7 @@ import java.io.*;
  * {@href : https://www.baeldung.com/java-serialization}
  * {@href : https://www.geeksforgeeks.org/serialization-in-java}
  *
- * If the class is not serializable and we try to writeObject usig ObjectOutputStream, then it will give
+ * If the class is not serializable and we try to writeObject using ObjectOutputStream, then it will give
  * exception : {@link java.io.NotSerializableException}
  *
  * If we do not explicitly declare the serialVersionUID, the JVM automatically generates one for us.
@@ -45,7 +46,7 @@ public class SerializationDemo {
 
     public static void main(String args[]) throws IOException, ClassNotFoundException, InterruptedException {
 
-        String fileName = "./resources/serializedFile";
+        String fileName = "/Users/vikas/GitRepo/JavaPractice/javaPractice/CoreJava/src/main/resources/serializedFile";
 
         Student student = new Student();
         student.setName("Vikas");

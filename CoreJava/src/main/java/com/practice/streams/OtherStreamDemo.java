@@ -1,10 +1,9 @@
 package com.practice.streams;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.OptionalDouble;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * This Class explains the usage of IntStream and how can we get the nth element
@@ -17,8 +16,6 @@ public class OtherStreamDemo {
 
         List<String> list1 = Utils.getStringList(5);
         System.out.println("The string list is : " + list1);
-
-
 
         List<Integer> list = Utils.getRandomIntegerList(100, 8);
         System.out.println(list);
@@ -34,6 +31,22 @@ public class OtherStreamDemo {
                 .collect(Collectors.toList());
 
         elementList.forEach(System.out::println);
+
+
+
+        List<String> tempList = Utils.getStringList(10);
+        System.out.println(tempList);
+
+        String[] stringArray = new String[tempList.size()];
+
+        System.out.println("********** string array max ***********");
+        tempList.forEach(value -> {
+            stringArray[tempList.indexOf(value)] = value;
+        });
+
+        Stream stream = Stream.of(stringArray);
+
+        stream.max(Comparator.naturalOrder()).ifPresent(System.out::println);
 
     }
 }

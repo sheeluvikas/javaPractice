@@ -1,8 +1,13 @@
 package com.practice.streams;
 
+import org.apache.log4j.Logger;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -12,14 +17,15 @@ import java.util.stream.Collectors;
  */
 public class CollectorsDemo {
 
+    private static final Logger log = Logger.getLogger(CollectorsDemo.class);
     public static void main(String[] args) {
         List<Integer> list = Utils.getRandomIntegerList(100,6);
-        System.out.println(list);
+        log.info(list);
 
         /** Groups them */
         Map<Integer, List<Integer>> groupingMap = list.stream().collect(Collectors.groupingBy(Integer::intValue));
-        System.out.println("********* Grouping Map ***********");
-        System.out.println(groupingMap);
+        log.info("********* Grouping Map ***********");
+        log.info(groupingMap);
 
         /** Partitioning Collector, partition them into TWO groups, based on the given predicate
          * The two keys will be false and true. */
@@ -27,8 +33,10 @@ public class CollectorsDemo {
 
         Map<Boolean, List<Integer>> partitionMap = list.stream()
                 .collect(Collectors.partitioningBy(greaterThan30Predicate));
-        System.out.println("************ Paritioning Map **********");
-        System.out.println(partitionMap);
+        log.info("************ Paritioning Map **********");
+        log.info(partitionMap);
 
+
+        /** BiConsumer to take two values and print the Sum of those two */
     }
 }
