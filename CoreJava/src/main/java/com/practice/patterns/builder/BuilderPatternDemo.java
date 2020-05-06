@@ -1,4 +1,4 @@
-package com.practice.patterns;
+package com.practice.patterns.builder;
 
 /**
  * This class explains how to write a Builder Pattern.

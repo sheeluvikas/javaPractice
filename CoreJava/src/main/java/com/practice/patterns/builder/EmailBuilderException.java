@@ -1,7 +1,7 @@
-package com.practice.patterns;
+package com.practice.patterns.builder;
 
 /**
- * THis is Email Builder Exception, to be thrown when there is some exception while building the
+ * This is Email Builder Exception, to be thrown when there is some exception while building the
  * Email Builder. for example, the required attributes are missing while building the Email Object.
  *
  */
