@@ -16,6 +16,10 @@ public class FunctionDemo {
 
         List<Integer> list = new ArrayList<>();
 
+        Predicate<Integer> p = (a) -> a == 10;
+
+
+
         list.add(1);
         list.add(2);
         list.add(3);

@@ -26,7 +26,7 @@ public class ExecutorServiceDemo {
         concurrentLinkedQueue.add(1);
         concurrentLinkedQueue.add(2);
 
-        concurrentLinkedQueue.stream().forEach( value -> {
+        concurrentLinkedQueue.forEach( value -> {
 
                 future = executorService1.submit(new CallableTask(concurrentLinkedQueue));
         });
@@ -41,5 +41,8 @@ public class ExecutorServiceDemo {
 
         System.out.println("Main Method ends here");
         executorService1.shutdownNow();
+        executorService1.shutdown();
+        /** executorService1.shutdown(); // this method is used to shutdown the executor serivce,
+         * once all the tasks are complete */
     }
 }

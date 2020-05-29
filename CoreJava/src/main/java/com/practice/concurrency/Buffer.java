@@ -38,7 +38,7 @@ public class Buffer {
     }
 
     /**
-     * Will continue consuming the elements untill the queue is emtpy
+     * Will continue consuming the elements untill the queue is empty
      * @throws InterruptedException
      */
     public void consume() throws InterruptedException {

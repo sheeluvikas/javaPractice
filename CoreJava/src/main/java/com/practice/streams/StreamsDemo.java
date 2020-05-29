@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * This class elaborate the concept of Streams in java 8
@@ -44,5 +45,13 @@ public class StreamsDemo {
 
         IntStream intStream = list.stream().mapToInt(x -> x * x);
         intStream.forEach(System.out::println);
+
+
+        /*** Other Streams ***/
+        System.out.println("*************");
+
+        Stream stream = Stream.of(1, 2,3);
+        stream.forEach(System.out::println);
+
     }
 }

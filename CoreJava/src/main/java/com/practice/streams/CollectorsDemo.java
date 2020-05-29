@@ -13,6 +13,14 @@ import java.util.stream.Collectors;
 
 /**
  * This Class explains the usage of the various Collectors methods like groupingBy, partitioningBy, etc.
+ * Also it will explain how to write our own custom collector.
+ *
+ * some static methods of Collectors utility class in java :
+ * Collectors.toList()
+ * Collectors.toSet()
+ * Collectors.toMap()
+ *
+ * the above methods return a Collector (Interface)
  *
  */
 public class CollectorsDemo {
