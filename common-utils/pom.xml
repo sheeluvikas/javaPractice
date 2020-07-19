@@ -8,15 +8,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.utils</groupId>
+    <artifactId>common-utils</artifactId>
+    <version>1.0.0</version>
 
-    <artifactId>Algorithms</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.utils</groupId>
-            <artifactId>common-utils</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
 
 </project>

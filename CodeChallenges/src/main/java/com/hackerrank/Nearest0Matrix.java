@@ -1,6 +1,5 @@
 package com.hackerrank;
 
-import com.Utils;
 
 import java.util.Random;
 import java.util.concurrent.*;

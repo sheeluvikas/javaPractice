@@ -16,5 +16,10 @@ public class DeepCloningDemo {
         /** The above code will return false, as this is Deep clone and NOT Shallow cloning */
         /** The city is also cloned in the clone method of Employee class */
 
+        System.out.println("Comparing the Name : " + (employee.getName() == employee1.getName()));
+        /***
+         * String method doesn't have clone because String is immutable hence we don't need Clone() method
+         */
+
     }
 }

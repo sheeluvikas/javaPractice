@@ -2,7 +2,7 @@ package com.practice.cloning;
 
 import java.util.Objects;
 
-public class Person implements Cloneable {
+public class Person extends Object implements Cloneable {
 
     private String name;
     private String phoneNumber;
@@ -33,7 +33,6 @@ public class Person implements Cloneable {
     }
 
     public Person clone() throws CloneNotSupportedException {
-
         return (Person) super.clone();
     }
 

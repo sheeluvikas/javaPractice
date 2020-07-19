@@ -6,7 +6,7 @@ import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
 /**
- * This class explains the usage of Date Time API
+ * This class explains the usage of Date Time API in java 8
  *
  */
 public class DateTimeDemo {
