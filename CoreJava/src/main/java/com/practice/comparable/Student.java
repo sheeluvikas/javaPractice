@@ -38,9 +38,9 @@ public class Student  implements Comparable{
         Student student = (Student) o;
 
         if(this.rollNumber < student.rollNumber){
-            return 1;
+            return -1;
         }
-        return -1;
+        return 1;
     }
 
     @Override
