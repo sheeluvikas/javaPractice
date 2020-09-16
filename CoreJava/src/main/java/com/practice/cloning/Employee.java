@@ -33,7 +33,7 @@ public class Employee implements Cloneable {
      * @return
      * @throws CloneNotSupportedException
      */
-    public Employee clone() throws CloneNotSupportedException {
+    public Employee clones() throws CloneNotSupportedException {
         Employee employee = (Employee) super.clone();
         employee.city = this.city.clone();
         return employee;

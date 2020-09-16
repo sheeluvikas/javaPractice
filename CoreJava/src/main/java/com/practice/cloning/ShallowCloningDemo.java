@@ -1,5 +1,11 @@
 package com.practice.cloning;
 
+/**
+ * The clone() method of the Object class creates a new instance
+ * and copies all fields of the Cloneable object
+ * to that new instance (either it is primitive or a reference)
+ *
+ */
 public class ShallowCloningDemo {
 
     public static void main(String[] args) throws CloneNotSupportedException {

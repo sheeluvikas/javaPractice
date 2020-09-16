@@ -7,7 +7,7 @@ public class DeepCloningDemo {
         /** we need to override the clone() method in every reference type we have in our object hierarchy */
         Employee employee = new Employee("Vikas", new City("Kanpur", 208022L));
 
-        Employee employee1 = employee.clone();
+        Employee employee1 = employee.clones();
 
 
         System.out.println("Comparing Employee objects : "+ ( employee == employee1)); /** This will return false*/
