@@ -1,7 +1,9 @@
 package com.practice.maps;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * This class is used to elaborate the concept of the internal working of Hash Map.
@@ -18,6 +20,14 @@ public class HashMapDemo {
 
         hashMap.put(new Student(1, "Vikas"), "Vikas");
         hashMap.put(new Student(1, "Vikas"), "Rahul");
+
+
+        Set<Student> set = new HashSet<>();
+        set.add(new Student(1, "Vikas"));
+        set.add(new Student(1, "Vikas"));
+
+        System.out.println("The size : " + set.size());
+
 
     }
 }
