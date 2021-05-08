@@ -19,7 +19,7 @@ public class Number {
     }
 
     /**
-     * Here is an exmaple of synchronized method.
+     * Here is an example of synchronized method.
      * if we remove the synchronized, the output will be weird there would be no thread safety.
      *
      * @param n

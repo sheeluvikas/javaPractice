@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Student implements Serializable {
 
     /** if we do not explicitly declare the serialVersionUID, the JVM automatically generates one for us.
-     * but this number is Compiler dependent and hence its recommended that we explicitly decalre one.
+     * but this number is Compiler dependent and hence its recommended that we explicitly declare one.
       */
     public static final long serialVersionUID = 1l;
 
