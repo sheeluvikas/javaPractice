@@ -2,14 +2,14 @@ package com.structure;
 
 public class MPFactory {
 
-    public MP getMPInstance(String type){
+    public MP getMPInstance(String type, Integer spending){
         if(type.equalsIgnoreCase("MP")){
-            return new MP();
+            return new MP(spending);
         }
         else if(type.equalsIgnoreCase("PM")){
-            return new PM();
+            return new PM(spending);
         }
-        else return new Minister();
+        else return new Minister(spending);
 
     }
 }
