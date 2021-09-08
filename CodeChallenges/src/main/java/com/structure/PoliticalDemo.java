@@ -3,9 +3,9 @@ package com.structure;
 public class PoliticalDemo {
 
     public static void main(String[] args) {
-        String MPType = "Minister";
+        String MPType = "MP";
         MPFactory mpFactory = new MPFactory();
-        MP mp = mpFactory.getMPInstance(MPType, 2000000);
+        MP mp = mpFactory.getMPInstance(MPType, 20000);
 
         System.out.println("Spending Limit " + mp.getSpendingLimit());
         System.out.println("is Aircraft : " + mp.getVehicle().isAircraft());

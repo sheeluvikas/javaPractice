@@ -11,6 +11,7 @@ public class PM extends MP{
     }
 
     public static boolean getPermission(){
+        System.out.print("Give permission to arrest(Yes/No) : ");
         Scanner sc = new Scanner(System.in);
         String permission = sc.next();
         if(permission.equalsIgnoreCase("Yes")){
