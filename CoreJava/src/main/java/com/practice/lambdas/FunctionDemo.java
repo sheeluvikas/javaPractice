@@ -19,7 +19,6 @@ public class FunctionDemo {
         Predicate<Integer> p = (a) -> a == 10;
 
 
-
         list.add(1);
         list.add(2);
         list.add(3);
