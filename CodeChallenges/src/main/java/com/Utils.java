@@ -2,6 +2,11 @@ package com;
 
 public class Utils {
 
+    public static void printArray(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
     public static void print2DArray(int [][] array){
         for(int i = 0; i < array.length; i++) {
             for(int j = 0; j < array[i].length; j++) {
